@@ -1,4 +1,4 @@
-# ASM Studio
+# ASM Studio - X86
 
 ASM Studio adalah assembler dan emulator Assembly berbasis web yang memungkinkan kode Assembly ditulis, di-assemble, dan dijalankan langsung di browser.
 
