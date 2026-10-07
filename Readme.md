@@ -1,10 +1,8 @@
-
-
 # ASM Studio
 
 ASM Studio adalah assembler dan emulator Assembly berbasis web yang memungkinkan kode Assembly ditulis, di-assemble, dan dijalankan langsung di browser.
 
-## 🚀 Features
+## Features
 
 - Assembly editor berbasis web
 - Build dan Run langsung di browser
@@ -18,7 +16,7 @@ ASM Studio adalah assembler dan emulator Assembly berbasis web yang memungkinkan
 - Contoh program siap digunakan
 - Source code contoh otomatis menyesuaikan mode CPU
 
-## 🖥️ CPU Modes
+## CPU Modes
 
 ASM Studio menyediakan beberapa mode Assembly melalui dropdown.
 
@@ -39,7 +37,6 @@ Digunakan untuk program x86 32-bit.
 
 Format dasar:
 
-```asm
 .386
 .model flat, stdcall
 option casemap:none
@@ -58,7 +55,7 @@ main ENDP
 
 END main
 
-🔄 Automatic Example Switching
+## Automatic Example Switching
 
 Contoh program di dropdown otomatis mengikuti mode CPU yang dipilih.
 
@@ -66,17 +63,19 @@ Misalnya pengguna memilih:
 
 Pascal Triangle
 
-kemudian mengubah mode:
+Kemudian mengubah mode:
 
-Assembly 8086 ↓ Assembly X86
+Assembly 8086
+        ↓
+Assembly X86
 
-source code Pascal Triangle di editor juga otomatis berubah ke versi x86.
+Source code Pascal Triangle di editor juga otomatis berubah ke versi x86.
 
 Hal yang sama berlaku untuk contoh lainnya.
 
-📚 Example Programs
+## Example Programs
 
-ASM Studio menyediakan beberapa contoh program, antara lain:
+ASM Studio menyediakan beberapa contoh program:
 
 - Hello World
 - Penjumlahan
@@ -91,7 +90,7 @@ ASM Studio menyediakan beberapa contoh program, antara lain:
 
 Setiap contoh memiliki source code yang disesuaikan dengan arsitektur CPU yang sedang dipilih.
 
-⚙️ X86 Emulator
+## X86 Emulator
 
 Mode X86 dijalankan menggunakan CPU virtual berbasis JavaScript.
 
@@ -101,18 +100,26 @@ Instruksi x86 diproses oleh emulator sehingga program dapat dijalankan langsung 
 - NASM
 - Visual Studio
 - Command Prompt
-- File ".bat"
+- File .bat
 - Compiler eksternal
 
-Register X86
+### Register X86
 
-Emulator menggunakan register 32-bit seperti:
+Emulator menggunakan register 32-bit:
 
-EAX EBX ECX EDX ESI EDI EBP ESP EIP
+EAX
+EBX
+ECX
+EDX
+ESI
+EDI
+EBP
+ESP
+EIP
 
-📐 X86 Directives
+## X86 Directives
 
-Source X86 mendukung struktur MASM-style seperti:
+Source X86 mendukung struktur MASM-style:
 
 .386
 .model flat, stdcall
@@ -120,7 +127,7 @@ option casemap:none
 
 Directive tersebut digunakan untuk menentukan target Assembly dan model memory.
 
-➗ Arithmetic
+## Arithmetic
 
 ASM Studio mendukung operasi aritmatika pada mode X86, termasuk:
 
@@ -138,11 +145,9 @@ mov ebx, 5
 
 div eax, ebx
 
-Hasil operasi tersedia melalui register emulator.
+## Control Flow
 
-🔀 Control Flow
-
-Program dapat menggunakan instruksi branching dan looping yang tersedia pada emulator, misalnya:
+Program dapat menggunakan instruksi branching dan looping yang tersedia pada emulator:
 
 CMP
 JMP
@@ -163,7 +168,7 @@ loop_start:
     cmp eax, 10
     jl loop_start
 
-🧮 Example: Factorial
+## Example: Factorial
 
 Contoh perhitungan factorial menggunakan mode X86:
 
@@ -192,9 +197,9 @@ Hasil:
 
 720
 
-🔢 Example: Pascal Triangle
+## Example: Pascal Triangle
 
-ASM Studio juga menyediakan implementasi Pascal Triangle menggunakan operasi aritmatika dan looping pada emulator X86.
+ASM Studio menyediakan implementasi Pascal Triangle menggunakan operasi aritmatika dan looping pada emulator X86.
 
 Contoh output:
 
@@ -207,7 +212,7 @@ Contoh output:
 1 6 15 20 15 6 1
 1 7 21 35 35 21 7 1
 
-🔢 Example: Binary
+## Example: Binary
 
 Program Binary digunakan untuk mengubah nilai integer menjadi representasi biner.
 
@@ -216,7 +221,7 @@ Contoh:
 Decimal : 8
 Binary  : 0000000000001000
 
-🛠️ Cara Menggunakan
+## Cara Menggunakan
 
 1. Buka ASM Studio di browser.
 2. Pilih mode Assembly dari dropdown.
@@ -226,7 +231,7 @@ Binary  : 0000000000001000
 6. Lihat hasil pada Program Output.
 7. Gunakan Registers dan Memory untuk melihat keadaan CPU.
 
-❌ Error Handling
+## Error Handling
 
 Jika assembler menemukan kesalahan, ASM Studio menampilkan:
 
@@ -238,11 +243,11 @@ line 22: unsupported x86 instruction 'XYZ'
 
 Nomor baris dapat digunakan untuk menemukan instruksi yang menyebabkan error.
 
-🌐 Browser Based
+## Browser Based
 
 ASM Studio dirancang untuk berjalan langsung di browser.
 
-Tidak diperlukan instalasi compiler Assembly eksternal untuk menggunakan emulator.
+Tidak diperlukan compiler Assembly eksternal untuk menggunakan emulator.
 
 Seluruh proses:
 
@@ -258,7 +263,7 @@ Program Output
 
 dijalankan di dalam aplikasi web.
 
-📁 Project Structure
+## Project Structure
 
 Struktur project secara umum:
 
@@ -274,7 +279,7 @@ File contoh Assembly dapat ditempatkan di folder:
 
 examples/
 
-⚠️ Limitations
+## Limitations
 
 ASM Studio adalah emulator edukasi berbasis web, bukan implementasi penuh prosesor Intel x86.
 
@@ -293,7 +298,7 @@ tidak disimulasikan.
 
 Instruction set yang tersedia bergantung pada implementasi emulator ASM Studio.
 
-🎓 Purpose
+## Purpose
 
 ASM Studio dibuat untuk membantu pembelajaran:
 
@@ -309,11 +314,11 @@ ASM Studio dibuat untuk membantu pembelajaran:
 
 Dengan ASM Studio, pengguna dapat mempelajari bagaimana kode Assembly diproses oleh CPU tanpa harus memasang toolchain Assembly secara manual.
 
-📄 License
+## License
 
 Tambahkan lisensi project sesuai kebutuhan project ini.
 
-
 ---
 
-ASM Studio — Web-based Assembly IDE & CPU Emulator
+ASM Studio
+Web-based Assembly IDE & CPU Emulator
