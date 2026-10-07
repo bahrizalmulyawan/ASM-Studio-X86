@@ -1,8 +1,10 @@
-ASM Studio
+
+
+# ASM Studio
 
 ASM Studio adalah assembler dan emulator Assembly berbasis web yang memungkinkan kode Assembly ditulis, di-assemble, dan dijalankan langsung di browser.
 
-🚀 Features
+## 🚀 Features
 
 - Assembly editor berbasis web
 - Build dan Run langsung di browser
@@ -16,11 +18,11 @@ ASM Studio adalah assembler dan emulator Assembly berbasis web yang memungkinkan
 - Contoh program siap digunakan
 - Source code contoh otomatis menyesuaikan mode CPU
 
-🖥️ CPU Modes
+## 🖥️ CPU Modes
 
 ASM Studio menyediakan beberapa mode Assembly melalui dropdown.
 
-Assembly 8086
+### Assembly 8086
 
 Digunakan untuk program Assembly 16-bit.
 
@@ -31,12 +33,13 @@ MOV BX, 20
 ADD AX, BX
 HLT
 
-Assembly X86 32-bit
+### Assembly X86 32-bit
 
 Digunakan untuk program x86 32-bit.
 
 Format dasar:
 
+```asm
 .386
 .model flat, stdcall
 option casemap:none
@@ -65,9 +68,7 @@ Pascal Triangle
 
 kemudian mengubah mode:
 
-Assembly 8086
-        ↓
-Assembly X86
+Assembly 8086 ↓ Assembly X86
 
 source code Pascal Triangle di editor juga otomatis berubah ke versi x86.
 
@@ -107,15 +108,7 @@ Register X86
 
 Emulator menggunakan register 32-bit seperti:
 
-EAX
-EBX
-ECX
-EDX
-ESI
-EDI
-EBP
-ESP
-EIP
+EAX EBX ECX EDX ESI EDI EBP ESP EIP
 
 📐 X86 Directives
 
@@ -319,6 +312,7 @@ Dengan ASM Studio, pengguna dapat mempelajari bagaimana kode Assembly diproses o
 📄 License
 
 Tambahkan lisensi project sesuai kebutuhan project ini.
+
 
 ---
 
