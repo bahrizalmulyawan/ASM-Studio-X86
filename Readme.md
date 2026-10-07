@@ -322,6 +322,7 @@ Tambahkan lisensi project sesuai kebutuhan project ini.
 
 ASM Studio
 Web-based Assembly IDE & CPU Emulator
-lIVE Demo
+
+## LIVE Demo
 https://bahrizalmulyawan.github.io/ASM_StudioV2/
 
